@@ -26,3 +26,5 @@ cur.execute("\COPY (SELECT * FROM Minecraft WHERE key=' KilledBy') To 'C:\Killed
 # Close communication with the database
 cur.close()
 conn.close()
+
+\copy (select start_t, stop_t, count from minecraft where server_id='server1' AND key='KilledBy') To 'C:\server1kill.csv' With CSV;

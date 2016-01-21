@@ -8,19 +8,27 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans:400,600">
     <link rel="stylesheet" type="text/css" href="sequences.css"/>
   </head>
+  <script>
+  d3.text("visit-sequences.csv", function(text) {
+  var csv = d3.csv.parseRows(text);
+  var json = buildHierarchy(csv);
+  createVisualization(json);
+  });
+  </script>
   <body>
     <div id="main">
       <div id="sequence"></div>
       <div id="chart">
         <div id="explanation" style="visibility: hidden;">
           <span id="percentage"></span><br/>
-          of Minecraft actions begin with this sequence
+          of Minecraft actions
         </div>
       </div>
     </div>
     <div id="sidebar">
       <input type="checkbox" id="togglelegend"> Legend<br/>
       <div id="legend" style="visibility: hidden;"></div>
+      <input type="button" onclick="location.href='killedby.html';" value="Server PK Data" />
     </div>
     <script type="text/javascript" src="sequences.js"></script>
     <script type="text/javascript">
