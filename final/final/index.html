@@ -8,15 +8,12 @@
       href="font/OpenSans">
     <link rel="stylesheet" type="text/css" href="css/sequences.css"/>
   </head>
-  <script>
-  d3.text("visit-sequences.csv", function(text) {
-  var csv = d3.csv.parseRows(text);
-  var json = buildHierarchy(csv);
-  createVisualization(json);
-  });
-  </script>
+
   <body>
-    <p1>Server Info</p1>
+  <div id="info">
+    Minecraft Data Visualization
+  </div>
+
     <div id="main">
       <div id="sequence"></div>
       <div id="chart">
@@ -31,7 +28,16 @@
       <div id="legend" style="visibility: hidden;"></div>
       <input type="button" onclick="location.href='killslider.html';" value="Server Kills" />
     </div>
+
     <script type="text/javascript" src="js/sequences.js"></script>
+    <script>
+    d3.text("visit-sequences.csv", function(text) {
+    var csv = d3.csv.parseRows(text);
+    var json = buildHierarchy(csv);
+    createVisualization(json);
+    });
+    </script>
+
     <script type="text/javascript">
       // Hack to make this example display correctly in an iframe on bl.ocks.org
       d3.select(self.frameElement).style("height", "700px");
