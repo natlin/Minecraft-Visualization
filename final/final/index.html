@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Minecraft D3</title>
-    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="js/d3.min.js"></script>
     <link rel="stylesheet" type="text/css"
-      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600">
-    <link rel="stylesheet" type="text/css" href="sequences.css"/>
+      href="font/OpenSans">
+    <link rel="stylesheet" type="text/css" href="css/sequences.css"/>
   </head>
   <script>
   d3.text("visit-sequences.csv", function(text) {
@@ -29,9 +29,9 @@
     <div id="sidebar">
       <input type="checkbox" autocomplete="off" id="togglelegend"> Legend<br/>
       <div id="legend" style="visibility: hidden;"></div>
-      <input type="button" onclick="location.href='killedby.html';" value="Server Kills" />
+      <input type="button" onclick="location.href='killslider.html';" value="Server Kills" />
     </div>
-    <script type="text/javascript" src="sequences.js"></script>
+    <script type="text/javascript" src="js/sequences.js"></script>
     <script type="text/javascript">
       // Hack to make this example display correctly in an iframe on bl.ocks.org
       d3.select(self.frameElement).style("height", "700px");

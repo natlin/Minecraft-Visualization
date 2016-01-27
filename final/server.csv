@@ -1,15 +1,15 @@
-serverID,totalKills
-Server 1,70752
-Server 2,6853
-Server 3,150
-Server 4,9101
-Server 5,2340
-Server 6,3532
-Server 7,131126
-Server 8,0
-Server 9,2848
-Server 10,5610
-Server 11,3286
-Server 12,7170
-Server 13,16579
-Server 14,7219
+serverID,totalKills,,70752,266566
+Server 1,70752,,6853,
+Server 2,6853,,150,
+Server 3,150,,9101,
+Server 4,9101,,2340,
+Server 5,2340,,3532,
+Server 6,3532,,131126,
+Server 7,131126,,0,
+Server 8,0,,2848,
+Server 9,2848,,5610,
+Server 10,5610,,3286,
+Server 11,3286,,7170,
+Server 12,7170,,16579,
+Server 13,16579,,7219,
+Server 14,7219,,,

@@ -31,3 +31,32 @@ body {
 .x.axis path {
   display: none;
 }
+
+svg {
+  font: 14px sans-serif;
+}
+
+circle {
+  -webkit-transition: fill-opacity 250ms linear;
+}
+
+.selecting circle {
+  fill-opacity: .2;
+}
+
+.selecting circle.selected {
+  stroke: #f00;
+}
+
+.resize path {
+  fill: orangered;
+  fill-opacity: .5;
+  stroke: #000;
+  stroke-width: 0px;
+}
+
+.brush .extent {
+  fill-opacity: .7;
+  fill:red;
+  shape-rendering: crispEdges;
+}
