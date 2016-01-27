@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
 <meta charset="utf-8">
+<title>Minecraft D3</title>
 <link rel="stylesheet" type="text/css"
   href="font/OpenSans">
 </head>
@@ -74,6 +75,18 @@ circle {
   fill: #fff;
 }
 
+/*#totalKills {
+  float: bottom;
+}*/
+
+#totalKills {
+  margin-top: 30px;
+  margin-left: 35px;
+  font-weight: 600;
+  fill: #fff;
+  font-size: 15px;
+}
+
 </style>
 <body>
   <div id="info">
@@ -83,12 +96,14 @@ circle {
     <input type="checkbox" autocomplete="off" id="togglelegend"> Legend<br/>
     <div id="legend" style="visibility: hidden;"></div>
   </div>
+  <div id="totalKills"> </div>
 
 <script src="js/d3.min.js"></script>
 <script>
 var svg = {};
 var brush = {};
 var circle = {};
+var temp = {};
 
 var colors = {
   "1": "#5687d1",
@@ -111,7 +126,7 @@ d3.select("#togglelegend").on("click", toggleLegend);
 
 //var data = d3.range(800).map(Math.random);
 //console.log(data);
-d3.csv("timekills.csv", type, function(error, data) {
+d3.csv("data/timekills.csv", type, function(error, data) {
   if (error) throw error;
 
 
@@ -125,7 +140,7 @@ rollup = d3.nest()
 }).entries(data);
   console.log(rollup);
 
-var margin = {top: 71, right: 50, bottom: 214, left: 50},
+var margin = {top: 41, right: 50, bottom: 214, left: 50},
     width = 960 - margin.left - margin.right,
     height = 1000 - margin.top - margin.bottom-50;
 
@@ -204,13 +219,15 @@ function brushstart() {
 
 function brushmove() {
   var s = brush.extent();
-  var temp = 0;
+  temp = 0;
   circle.classed("selected", function(d) {
     if(s[0] <= +d.start_t && +d.start_t <= s[1]){
       temp += d.count;
     }
    return s[0] <= +d.start_t && +d.start_t <= s[1]; });
-
+  d3.select("#totalKills")
+    .text("Total Kills: " + temp)
+    .style("opacity", 0.7);
   /*function(d){
     if(s[0] <= +d.key && +d.key <= s[1]){
       temp += d.values;
