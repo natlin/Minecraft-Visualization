@@ -3,16 +3,16 @@ Minecraft Data Visualization
 
 Team Members
 ------------
-Nathan Lin - 100%
+Nathan Lin - 100% of work
 
 
 Resources
 ---------
 This project used these particuar resources:
-http://bl.ocks.org/kerryrodden/7090426
-http://bost.ocks.org/mike/miserables/
-http://stackoverflow.com/questions/20463614/les-miserables-co-occurrence
-http://bl.ocks.org/mbostock/4349545
+* http://bl.ocks.org/kerryrodden/7090426
+* http://bost.ocks.org/mike/miserables/
+* http://stackoverflow.com/questions/20463614/les-miserables-co-occurrence
+* http://bl.ocks.org/mbostock/4349545
 
 Referenced Libraries
 --------------------
