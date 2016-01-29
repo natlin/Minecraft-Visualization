@@ -37,5 +37,17 @@ chat.html
 ---------
 This view shows player-player interaction through chat. There is a matrix which shows the interactions between servers. Note that there is always a diagonal line, since each player will always interact with itself. The matrix has colored squares when the player has chatted with another player. The darker the color of the square, the more times that Player A has interacted with Player B. When the mouse is hovered over a square of the matrix, the names of the people involved in that interaction will be displayed in red. You can order the matrix through a drop down menu which allows you to sort alphabetically by name, or by the count of how many times the player has chatted. There is another drop down menu which allows you to select which server to view the interactions with. This only shows the interactions of 70 players (71 in the case of Server 11) since there are so many different players on each server, that there would not be enough space on the screen to display the interactions between all players.
 
+Conclusions
+===========
+
 Insights
-========
+--------
+Some insights that cannot be gleamed from the dataset alone:
+* Not all servers have equal amounts of players. Some servers are a lot more popular than other servers
+* Not all servers have all actions occur. Some do not have any player kills, some do not have any crafted items, etc
+* Something interesting was that Server 8 had zero player kills, yet it had a lot more players than Server 3. It is interesting that even with more people, they did not have anyone that turned into a player killer.
+
+Extra Credit
+------------
+* Among the extra credit tasks, one of the examples was saying to show which server was the bloodiest. The killslider.html can display this by the size of the circles on the visualization.
+* Player activity across servers can be seen in the index.html overview, as you can see the percentage of actions on each server based on the size of the arcs. You can see that certain servers have more BlockPlace while others have more KilledBy, etc.
